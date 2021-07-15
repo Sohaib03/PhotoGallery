@@ -7,7 +7,7 @@ import firebase_admin
 from firebase_admin import credentials, initialize_app, storage
 
 
-cred = credentials.Certificate('API_CONFIG/config.json')
+cred = credentials.Certificate(os.path.join(settings.BASE_DIR, 'API_CONFIG/config.json'))
 default_app = initialize_app(cred, {'storageBucket': 'photogallery-d484b.appspot.com'})
 
 bucket = storage.bucket()
