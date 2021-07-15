@@ -1,0 +1,7 @@
+apiKey: "AIzaSyDqs8p7-bmiHcjY2knWjPx3Azp5aoZq2hc",
+    authDomain: "photogallery-d484b.firebaseapp.com",
+    projectId: "photogallery-d484b",
+    storageBucket: "photogallery-d484b.appspot.com",
+    messagingSenderId: "1031820584219",
+    appId: "1:1031820584219:web:815d361d00c11aad215fbe",
+    measurementId: "G-YNZH8Y8KV5"
