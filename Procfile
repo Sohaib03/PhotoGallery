@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath photoGallery photoGallery.wsgi --log-file -
+web: gunicorn photoGallery.wsgi --log-file -
