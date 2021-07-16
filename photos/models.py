@@ -65,7 +65,7 @@ class Photo(models.Model):
         blob.upload_from_filename(path)
         blob.make_public()
 
-        print("Local Path::", path)
+        print("\n*** Local Path::", path, os.path.exists(path), "***\n")
         os.remove(path)
 
         self.url = blob.public_url
@@ -74,6 +74,7 @@ class Photo(models.Model):
         super(Photo, self).save(*args, **kwargs)
 
         local_store_path = os.path.join(settings.BASE_DIR, 'static\images', str(self.image))
+        print("\n*** Local Store Path::", path, os.path.exists(path), "***\n")
 
         if os.path.exists(local_store_path):
             os.remove(local_store_path)
