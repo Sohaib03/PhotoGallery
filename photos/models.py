@@ -75,7 +75,8 @@ class Photo(models.Model):
 
         local_store_path = os.path.join(settings.BASE_DIR, 'static\images', str(self.image))
 
-        os.remove(local_store_path)
+        if os.path.exists(local_store_path):
+            os.remove(local_store_path)
 
     def delete(self, *args, **kwargs):
         print("\n**** Deleting Photo ****\n")
